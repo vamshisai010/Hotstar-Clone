@@ -6,7 +6,7 @@ on:
 
 env:
   AWS_REGION: ap-south-1
-  ECR_REPOSITORY: hotstar-clone
+  ECR_REPOSITORY: hotstar/hotstar-clone
   ECS_CLUSTER: hotstar-cluster
   ECS_SERVICE: hotstar-service
   CONTAINER_NAME: hotstar-container
