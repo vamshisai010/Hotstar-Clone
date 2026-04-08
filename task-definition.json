@@ -1,13 +1,13 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:230399361118:task-definition/neha-task:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:846697434284:task-definition/hotstar-service:1",
     "containerDefinitions": [
         {
-            "name": "neha",
-            "image": "230399361118.dkr.ecr.us-east-1.amazonaws.com/hostar-app@sha256:4ff6fadfa25e739091eb4f81151ead37b835fc82504501ee92553689934e705f",
+            "name": "hotstar-container",
+            "image": "846697434284.dkr.ecr.ap-south-1.amazonaws.com/hotstar/hotstar-clone@sha256:c7a95fec06333d7ead87961ab5b0427b10bb1bddfa48adfcf7313c9ec020af91",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "neha-80-tcp",
+                    "name": "8080",
                     "containerPort": 80,
                     "hostPort": 80,
                     "protocol": "tcp",
@@ -23,9 +23,9 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/neha-task",
+                    "awslogs-group": "/ecs/hotstar-service",
                     "awslogs-create-group": "true",
-                    "awslogs-region": "us-east-1",
+                    "awslogs-region": "ap-south-1",
                     "awslogs-stream-prefix": "ecs"
                 },
                 "secretOptions": []
@@ -33,8 +33,8 @@
             "systemControls": []
         }
     ],
-    "family": "neha-task",
-    "executionRoleArn": "arn:aws:iam::230399361118:role/ecsTaskExecutionRole",
+    "family": "hotstar-service",
+    "executionRoleArn": "arn:aws:iam::846697434284:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
     "volumes": [],
@@ -71,8 +71,8 @@
     "placementConstraints": [],
     "compatibilities": [
         "EC2",
-        "MANAGED_INSTANCES",
-        "FARGATE"
+        "FARGATE",
+        "MANAGED_INSTANCES"
     ],
     "requiresCompatibilities": [
         "FARGATE"
@@ -83,8 +83,8 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2026-04-01T06:48:53.940Z",
-    "registeredBy": "arn:aws:iam::230399361118:root",
+    "registeredAt": "2026-04-08T06:09:50.741Z",
+    "registeredBy": "arn:aws:iam::846697434284:root",
     "enableFaultInjection": false,
     "tags": []
 }
